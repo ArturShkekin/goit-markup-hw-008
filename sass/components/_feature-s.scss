@@ -1,0 +1,80 @@
+.feature-s {
+    background-color: $color;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @media screen and (min-width: $tablet-upper) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    } 
+    @media screen and (min-width: $desktop-upper) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+}
+
+.is-hidden {
+   display: none;
+   margin: 0;
+}
+
+.antenna {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    background-color: $colorturbid;
+    border-radius: 4px;
+}
+
+.icon-antenna {
+    width: 70px;
+    height: 70px;
+}
+
+.feature-title {
+    @extend %font14;
+    padding-top: 30px;
+    margin: 0;
+    color: $colorsemyblack;
+    @media screen and (max-width: 767px){
+        text-align: center;
+    }
+}
+
+.feature-text {
+    @extend %font1424;
+    text-align: start;
+    padding-top: 10px;
+    padding-bottom: 2px;
+    margin: 0;
+}
+
+.feature-ul {
+    @media screen and (min-width: $tablet-upper) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    @media screen and (min-width: $desktop-upper){
+        display: flex;
+    }
+}
+
+.feature-li {
+    &:not(:last-child) {
+        @media screen and (max-width: 767px) {
+        margin-bottom: 30px;
+      }
+    }
+    @media screen and (min-width: $tablet-upper) {
+        max-width: 354px;
+        &:nth-child(2n+1){
+            margin-right: 30px;
+        }
+    }
+    @media screen and (min-width: $desktop-upper){
+        max-width: 270px;
+        &:not(:last-child){
+            margin-right: 30px;
+        }
+    }
+}
