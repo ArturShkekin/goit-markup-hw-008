@@ -1,14 +1,28 @@
 .logo {
     @extend %logo;
-    font-size: 26px;
-    line-height: 31px;
     color: $colorblack;
-    padding-top: 24px;
-    padding-bottom: 25px;
-    margin-right: 85px;
+    font-size: 24px;
+    line-height: 28px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-right: auto;
     &:hover,
     &:focus {
         color: $colorhover; 
+    }
+    @media screen and (min-width: $tablet-upper) {
+        font-size: 24px;
+        line-height: 28px;
+        padding-top: 26px;
+        padding-bottom: 26px;
+        margin-right: 81px;
+    }
+    @media screen and (min-width: $desktop-upper) {
+        font-size: 26px;
+        line-height: 31px;
+        padding-top: 24px;
+        padding-bottom: 25px;
+        margin-right: 85px;
     }
 }
 
