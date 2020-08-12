@@ -1,8 +1,16 @@
 .div-nav {
     display: flex;
-    padding-top: 60px;
-    padding-bottom: 60px;
-    justify-content: center;
+    @media screen and (max-width: 767px){
+        padding-top: 60px;
+        padding-bottom: 60px;
+        justify-content: center;
+    }
+    @media screen and (min-width: $tablet-upper) {
+        margin-right: 84px;
+    }
+    @media screen and (min-width: $desktop-upper) {
+        margin-right: 305px;
+    }
 }
 
 .nav-link {
@@ -17,7 +25,7 @@
     &:focus {
         color: $colorhover; 
     }
-    @media screen and (min-width: $desktop-upper) {
+    @media screen and (min-width: $tablet-upper) {
         font-size: 14px;
         line-height: 16px;
         padding-top: 32px;
@@ -27,15 +35,24 @@
 
 .div-nav-ul {
     display: flex;
-    flex-direction: column;
+    @media screen and (max-width: 767px) {
+        flex-direction: column;
+    }
 }
 
-.div-nav-li:not(:last-child) {
+.div-nav-li {
     @media screen and (max-width: 767px) {
-        margin-bottom: 40px;
+        &:not(:last-child) > a.nav-link{
+            margin-bottom: 40px;
+        }
+        & > a.nav-link-active {
+         margin-bottom: 52px;
+        }
     }
-    @media screen and (min-width: $desktop-upper) {
-        margin-right: 50px;
+    @media screen and (min-width: $tablet-upper) {
+        &:not(:last-child) {
+            margin-right: 50px; 
+        }
     }
 }
 
@@ -47,7 +64,7 @@
     line-height: 21px;
     letter-spacing: 0.02em;
     color: $colorhover;
-    @media screen and (min-width: $desktop-upper) {
+    @media screen and (min-width: $tablet-upper) {
         font-size: 14px;
         line-height: 16px;
         padding-top: 32px;
@@ -56,14 +73,18 @@
 }
 
 .nav-link-active::after {
+    position: absolute;
     content: "";
     display: block;
     width: 100%;
     height: 4px;
     background-color: $colorhover;
     border-radius: 2px;
-    position: absolute;
-    margin-top: 8px;
-    /*bottom: 0;*/
+    @media screen and (max-width: 767px){
+        margin-top: 8px;
+    }
+    @media screen and (min-width: $tablet-upper){
+        bottom: 0;
+    }
 } 
 
