@@ -65,11 +65,14 @@
         margin-bottom: 30px;
       }
     }
-    @media screen and (min-width: $tablet-upper) {
+    @media screen and (min-width: $tablet-upper) and (max-width: $desktop-upper) {
         max-width: 354px;
         &:nth-child(2n+1){
             margin-right: 30px;
         }
+        &:nth-child(-n+2) {
+            margin-bottom: 30px;
+        } 
     }
     @media screen and (min-width: $desktop-upper){
         max-width: 270px;
