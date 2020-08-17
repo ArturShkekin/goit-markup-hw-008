@@ -16,7 +16,7 @@
   letter-spacing: 0.03em;
 }
 
-.doing-text, .feature-title, .footer-social-title, .footer-email-title {
+.doing-text, .feature-title, .footer-social-title {
   font-weight: bold;
   font-size: 14px;
   line-height: 16px;
@@ -605,8 +605,18 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding-top: 60px;
-  padding-bottom: 28px;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .div-footer {
+    padding-bottom: 28px;
+  }
 }
 
 .footer-signature {
@@ -627,17 +637,76 @@ img {
   margin: 0;
 }
 
-.div-address {
-  margin-right: 69px;
+@media screen and (max-width: 1199px) {
+  .footer-signature {
+    display: none;
+  }
+}
+
+/*.div-address {
+    margin-right: 69px;
 }
 
 .box-address {
-  padding-right: 15px;
+    padding-right: 15px;
 }
 
 .logo-footer {
-  font-size: 22px;
-  line-height: 26px;
+    @extend %logo;
+    font-size: 22px;
+    line-height: 26px;
+    color: $color;
+    &:hover,
+    &:focus {
+        color: $colorhover; 
+    }
+}
+
+.logo-footer-part {
+    color: $colorhover;
+    margin: 0;
+}
+
+.footer-address {
+    display: flex;
+    flex-direction: column;
+    color: $color;
+    @extend %footer-address;
+    padding-top: 10px;
+    margin: 0;
+}
+  
+.footer-address-contacts {
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.6);
+    @extend %footer-address;
+    padding-top: 9px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+        color: $colorhover; 
+    }
+}*/
+.div-address {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.address-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.logo-footer {
+  font-size: 24px;
+  line-height: 28px;
   color: #FFFFFF;
 }
 
@@ -659,14 +728,28 @@ img {
       -ms-flex-direction: column;
           flex-direction: column;
   color: #FFFFFF;
-  padding-top: 10px;
+  padding-top: 20px;
   margin: 0;
 }
 
+@media screen and (min-width: 1200px) {
+  .footer-address {
+    padding-top: 10px;
+  }
+}
+
 .footer-address-contacts {
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   color: rgba(255, 255, 255, 0.6);
-  padding-top: 9px;
+  padding-top: 8px;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -675,6 +758,59 @@ img {
   color: #2196f3;
 }
 
+@media screen and (min-width: 1200px) {
+  .footer-address-contacts {
+    display: inline-block;
+    padding-top: 9px;
+  }
+}
+
+/*.footer-social {
+    display: flex;
+    flex-direction: column;
+    margin-right: 94px;
+}
+
+.footer-social-title {
+    @extend %font14;
+    color: $color;
+    margin: 0;
+}
+
+.footer-ul {
+    display: flex;
+    flex-direction: row;
+    padding-top: 21px;
+}
+
+.footer-li {
+    display: inline-flex;
+}
+
+.footer-li:not(:last-child) {
+    margin-right: 10px;
+}
+
+.icon-footer-instagram {
+    width: 20px;
+    height: 20px;
+    fill: $color;
+}
+
+.footer-social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+        background-color: $colorhover; 
+    }
+}*/
 .footer-social {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -683,10 +819,19 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-right: 94px;
+  margin-top: 60px;
 }
 
 .footer-social-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   color: #FFFFFF;
   margin: 0;
 }
@@ -695,11 +840,13 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  padding-top: 21px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 20px;
 }
 
 .footer-li {
@@ -740,83 +887,63 @@ img {
   background-color: #2196f3;
 }
 
-.footer-email-title {
-  color: #FFFFFF;
-  margin: 0;
-  margin-bottom: 21px;
+/*.footer-email-title {
+    @extend %font14;
+    color: $color;
+    margin: 0;
+    margin-bottom: 21px;
 }
 
+
 .email-button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+    display: flex;
+    flex-direction: row;
 }
 
 .footer-email {
-  width: 358px;
-  height: 50px;
-  color: rgba(255, 255, 255, 0.6);
-  letter-spacing: 0.03em;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  background: #2f303a;
-  border-radius: 4px;
-  margin-right: 12px;
-  padding-right: 12px;
-  padding-left: 12px;
+    width: 358px;
+    height: 50px;
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 0.03em;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    background: #2f303a;
+    border-radius: 4px;
+    margin-right: 12px;
+    padding-right: 12px;
+    padding-left: 12px;
 }
 
 .footer-button {
-  background-color: #2196f3;
-  color: #FFFFFF;
-  width: 200px;
-  height: 50px;
-  font-weight: 900;
-  font-size: 16px;
-  line-height: 30px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-  letter-spacing: 0.06em;
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border: none;
-  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: #2196f3;
+    color: $color;
+    width: 200px;
+    height: 50px;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 30px;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-footer-button {
-  width: 24px;
-  height: 24px;
-  padding-left: 10px;
-}
-
+    width: 24px;
+    height: 24px;
+    padding-left: 10px;
+}*/
 .header {
   position: relative;
   background-color: #FFFFFF;
@@ -1392,45 +1519,31 @@ img {
 .logo1 {
   width: 44.27px;
   height: 49.23px;
-  margin-left: auto;
-  margin-right: auto;
-  /*margin-left: 62px;
-    margin-right: 62px;*/
 }
 
 .logo2 {
   width: 40px;
   height: 52px;
-  /*margin-left: 64px;
-    margin-right: 64px;*/
 }
 
 .logo3 {
   width: 41px;
   height: 42.6px;
-  /*margin-left: 63px;
-    margin-right: 64px;*/
 }
 
 .logo4 {
   width: 79.66px;
   height: 42.02px;
-  /*margin-left: 44px;
-    margin-right: 44px;*/
 }
 
 .logo5 {
   width: 59px;
   height: 47px;
-  /*margin-right: 54px;
-    margin-left: 55px;*/
 }
 
 .logo6 {
   width: 88.48px;
   height: 45.44px;
-  /*margin-left: 40px;
-    margin-right: 40px;*/
 }
 
 .logo-style {
