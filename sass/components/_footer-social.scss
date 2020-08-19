@@ -1,8 +1,9 @@
 .footer-social {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-self: flex-start;
     @media screen and (max-width: 767px) {
+        align-items: center;
         margin-top: 60px;
         margin-right: auto;
         margin-left: auto;
@@ -12,6 +13,7 @@
     }
     @media screen and (min-width: $desktop-upper) {
         margin-right: 94px; 
+        margin-top: 12px;
     }
 }
 
@@ -19,9 +21,12 @@
     @extend %font14;
     color: $color;
     margin: 0;
-    display: flex;
-    justify-content: center;
-    @media screen and (min-width: $tablet-upper) {
+    @media screen and (max-width: 1199px) {
+        display: flex;
+        justify-content: center;
+        flex-grow: 1;
+    }
+    @media screen and (min-width: $desktop-upper) {
         display: inline-block;
         justify-content: center;
     }
@@ -34,6 +39,7 @@
         padding-top: 20px;
     }
     @media screen and (min-width: $desktop-upper) {
+        flex-direction: row;
         padding-top: 21px; 
     }
 }
