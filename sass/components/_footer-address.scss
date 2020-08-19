@@ -3,8 +3,9 @@
         margin-left: auto;
         margin-right: auto;
     }
-    @media screen and (min-width: $tablet-upper) and (max-width: 1199px) {
-        width: 232px;
+    @media screen and (min-width: $tablet-upper) {
+        margin-left: 61px;
+        margin-right: 165px;
     }
     @media screen and (min-width: $desktop-upper) {
         margin-right: 69px;
