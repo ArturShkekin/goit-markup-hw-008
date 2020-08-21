@@ -48,19 +48,30 @@
 .popup-text {
     font-weight: bold;
     font-size: 20px;
-    line-height: 23px;
+    line-height: 30px;
     text-align: center;
     letter-spacing: 0.03em;
     color: $colorsemyblack;
     padding-top: 40px;
     margin: 0;
     margin-bottom: 30px;
+    @media screen and (max-width: 1199px) {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 370px;
+    }
+    @media screen and (min-width: $desktop-upper) {
+        line-height: 23px;
+    }
 }
 
 .form-popup {
-    width: 448px;
+    width: 370px;
     margin-left: 40px;
     margin-right: 40px;
+    @media screen and (min-width: $desktop-upper) {
+        width: 448px;
+    }
 }
 
 .div-popup {
@@ -120,6 +131,8 @@
 .form-input:not(:placeholder-shown) + .form-label {
     color: $colorhover;
     transform: translateY(-32px) translateX(-26px);
+    font-size: 12px;
+    line-height: 14px;
 }
 
 .form-input:placeholder-shown {
@@ -155,16 +168,22 @@
 .form-comment:not(:placeholder-shown) + .comment-label {
     color: $colorhover;
     transform: translateY(-32px) translateX(-26px);
+    font-size: 12px;
+    line-height: 14px;
 }
 
 .checkbox-label {
     display: flex;
     align-items: center;
     font-weight: normal;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 12px;
+    line-height: 14px;
     letter-spacing: 0.03em;
     color: $colorgray;
+    @media screen and (min-width: $desktop-upper) {
+        font-size: 14px;
+        line-height: 24px;
+    }
 }
 
 .checkbox {
@@ -183,10 +202,14 @@
     text-decoration: underline;
     color: $colorhover;
     font-weight: normal;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 12px;
+    line-height: 14px;
     letter-spacing: 0.03em;
     padding-left: 4px;
+    @media screen and (min-width: $desktop-upper) {
+        font-size: 14px;
+        line-height: 24px;
+    }
 }
 
 .form-span {
