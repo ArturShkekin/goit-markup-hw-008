@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .logo, .logo-footer {
   display: inline-block;
   font-family: 'Raleway', sans-serif;
@@ -1972,11 +1971,6 @@ img {
   }
 }
 
-/*<img 
-                        srcset="./img/john480@1x.jpg 1x, ./img/john480@2x.jpg 2x" 
-                        src="./img/john480@1x.jpg" 
-                        alt="фото Джона" 
-                        width="450">*/
 .project-portfolio {
   display: -webkit-box;
   display: -ms-flexbox;
